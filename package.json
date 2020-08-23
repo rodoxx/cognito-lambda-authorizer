@@ -1,0 +1,13 @@
+{
+  "name": "lambda-cognito-validation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "node -e \"(async () => console.log(await require('./index').handler({'methodArn': 'arn:aws:execute-api:xxx/*/GET/','authorizationToken':'COGNITO_ACCESSTOKEN'})))();\""
+  },
+  "dependencies": {
+    "aws-sdk": "^2.738.0",
+    "jsonwebtoken": "^8.5.1"
+  }
+}
